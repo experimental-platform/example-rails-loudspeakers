@@ -1,6 +1,6 @@
 # Sound Example for Experimental Platform
 
-[The Rails code](https://github.com/experimental-platform/example-speaker/blob/master/app/controllers/soundboard_controller.rb) only contains a few lines and is easy to understand. It uses [mplayer](https://help.ubuntu.com/community/MPlayer) for playing a sound located in the ``sounds/`` directory.
+[The Rails code](https://github.com/experimental-platform/example-rails-loudspeakers/blob/master/app/controllers/soundboard_controller.rb) only contains a few lines and is easy to understand. It uses [mplayer](https://help.ubuntu.com/community/MPlayer) for playing a sound located in the ``sounds/`` directory. There's also an example written in [Node.JS](https://github.com/experimental-platform/example-nodejs-loudspeakers).
 
 ## Requirements
 
