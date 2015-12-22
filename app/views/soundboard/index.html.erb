@@ -1,0 +1,30 @@
+<h2>Soundboard</h2>
+<p>Play a sound:</p>
+
+<button id="meow">Cat</button>
+<button id="woof">Dog</button>
+<button id="moo">Cow</button>
+<button id="meeh">Sheep</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+  $("button").on("click", function() {
+    var $button = $(this);
+    var origText = $button.text();
+    $.ajax({
+      url: "./soundboard/" + this.id,
+      data: "authenticity_token=" + encodeURIComponent($('meta[name=csrf-token]').attr('content')),
+      type: "POST",
+      beforeSend: function() {
+        $button.prop("disabled", true).text("Playing ...");
+      },
+      error: function() {
+        alert("An unknown error happend. :(");
+      },
+      complete: function() {
+        $button.prop("disabled", false).text(origText);
+      }
+    });
+    return false;
+  });
+</script>

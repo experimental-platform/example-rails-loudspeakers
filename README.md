@@ -1,12 +1,15 @@
-# Rails "Hello World" Example for Experimental Platform
+# Sound Example for Experimental Platform
 
-## Usage
+[The Rails code](https://github.com/experimental-platform/example-speaker/blob/master/app/controllers/soundboard_controller.rb) only contains a few lines and is easy to understand. It uses [mplayer](https://help.ubuntu.com/community/MPlayer) for playing a sound located in the ``sounds/`` directory.
 
-    git clone https://github.com/experimental-platform/rails-hello-world.git
-    cd rails-hello-world
-    git remote add platform ssh://dokku@your-box.local:8022/rails-hello-world
+## Requirements
+
+* A machine that runs [Experimental Platform](https://github.com/experimental-platform/platform-configure-script)
+* A loud speaker, we used [this](http://www.amazon.com/Logitech-S150-Speakers-Digital-Sound/dp/B000ZH98LU)
+
+## Installation
+
+    git clone https://github.com/experimental-platform/example-rails-loudspeakers.git
+    cd example-rails-loudspeakers
+    git remote add platform ssh://dokku@your-box.local:8022/example-rails-loudspeakers
     git push platform master
-
-## Run rake tasks (eg. migrations)
-
-    ssh -p 8022 dokku@<your-machine>.local run <your-app> bundle exec rake db:migrate
